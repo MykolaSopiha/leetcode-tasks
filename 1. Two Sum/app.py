@@ -2,10 +2,12 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        nums_indexes = {}
+
         for i1 in range(len(nums)):
-            try:
-                i2 = nums.index(target - nums[i1])
-                if i1 != i2:
-                    return [i1, i2]
-            except ValueError:
-                pass
+            complement = target - nums[i1]
+
+            if complement in nums_indexes:
+                return [i1, nums_indexes[complement]]
+            else:
+                nums_indexes[nums[i1]] = i1
