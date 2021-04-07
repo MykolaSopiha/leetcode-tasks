@@ -6,7 +6,7 @@ class TestRemoveDuplicatesFromSortedArray(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
 
-    def test_longest_palindrome(self):
+    def test_remove_duplicates(self):
         nums = [1,1,2]
         self.assertEqual(self.solution.removeDuplicates(nums), 2)
         self.assertEqual(nums, [1,2])
