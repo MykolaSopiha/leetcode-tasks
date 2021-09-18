@@ -2,7 +2,7 @@ import unittest
 from typing import List
 
 from app import Solution
-from data_structures import ListNode
+from ListNode import ListNode
 
 class TestAddTwoNumbers(unittest.TestCase):
     def setUp(self):
